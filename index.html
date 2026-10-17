@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kalkulator TOPSIS — gratis untuk mahasiswa</title>
+  <meta name="description" content="Kalkulator TOPSIS gratis: kriteria benefit/cost, bobot manual, Entropy, CRITIC, atau AHP, langkah perhitungan lengkap dengan rumus, diagram, analisis sensitivitas, serta laporan PDF dan Excel. Berjalan sepenuhnya di browser.">
+  <meta name="theme-color" content="#3730a3">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="assets/img/icon-nusait.webp" sizes="192x192" type="image/webp" />
+  <link rel="canonical" href="https://edgarcia-id.github.io/topsis-decision-engine-v2/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kalkulator TOPSIS — gratis untuk mahasiswa">
+  <meta property="og:description" content="Masukkan kriteria dan alternatif, pilih metode bobot, lihat langkah perhitungan TOPSIS lengkap, uji sensitivitas, dan unduh laporan PDF/Excel. Gratis, tanpa akun, data tetap di browser.">
+  <meta property="og:url" content="https://edgarcia-id.github.io/topsis-decision-engine-v2/">
+  <meta property="og:locale" content="id_ID">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TOPSIS Decision Engine",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web browser",
+    "inLanguage": "id",
+    "url": "https://edgarcia-id.github.io/topsis-decision-engine-v2/",
+    "description": "Kalkulator TOPSIS gratis untuk mahasiswa dan peneliti.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "IDR" },
+    "author": { "@type": "Person", "name": "Alfredo Garcia Elbarta Tarigan", "identifier": "https://orcid.org/0009-0001-4549-5129" },
+    "license": "https://opensource.org/licenses/MIT"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Lompat ke konten</a>
+
+  <header class="hero">
+    <div class="hero-row">
+      <div class="hero-text">
+        <div class="eyebrow">Decision Lab · Multi-Criteria Decision</div>
+        <h1 class="hero-title">Kalkulator TOPSIS</h1>
+        <p class="hero-sub">Bandingkan alternatif berdasarkan banyak kriteria sekaligus. Atur bobot, tandai kriteria Benefit atau Cost, masukkan nilai, lalu lihat peringkat alternatif yang paling dekat dengan kondisi ideal.</p>
+      </div>
+      <div class="hero-actions">
+        <button class="btn glass" data-act="help">
+          <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 16v-4M12 8h.01"/></svg>
+          Cara Penggunaan
+        </button>
+        <button class="btn glass" data-act="samples">Contoh &amp; baru</button>
+        <button class="btn glass" data-act="open-file">Buka</button>
+        <button class="btn glass" data-act="save-json" title="Unduh proyek (.json) — Ctrl+S">Simpan</button>
+      </div>
+    </div>
+    <div class="hero-row hero-project">
+      <label class="title-field"><span>Proyek</span>
+        <input id="project-title" type="text" maxlength="160" autocomplete="off" spellcheck="false">
+      </label>
+      <span id="save-state" class="save-state" aria-live="polite"></span>
+    </div>
+    <nav id="steps" class="steps" aria-label="Langkah kerja"></nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript><p class="panel">Aplikasi ini membutuhkan JavaScript. Aktifkan JavaScript di browser Anda.</p></noscript>
+  </main>
+
+  <footer class="foot">
+    <p>Gratis untuk mahasiswa, dosen, dan peneliti. Semua perhitungan berjalan di browser Anda.</p>
+    <p><a href="https://github.com/edgarcia-id/topsis-decision-engine-v2" target="_blank" rel="noopener">Kode sumber (MIT)</a>
+      <span aria-hidden="true">/</span> Dikembangkan oleh Ed Garcia</p>
+  </footer>
+
+  <input type="file" id="file-input" accept=".json,.csv,.tsv,.txt,.xlsx,application/json,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" multiple hidden>
+
+  <div id="modal" class="modal" hidden>
+    <div id="modal-card" class="modal-card" role="dialog" aria-modal="true" aria-label="Dialog">
+      <button id="modal-close" class="icon-btn modal-x" aria-label="Tutup">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  <div id="toasts" class="toasts"></div>
+  <div id="tip" class="tip" role="tooltip" hidden></div>
+
+  <script src="assets/js/topsis-core.js"></script>
+  <script src="assets/js/model.js"></script>
+  <script src="assets/js/charts.js"></script>
+  <script src="assets/js/export.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

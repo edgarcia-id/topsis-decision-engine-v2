@@ -1,0 +1,16 @@
+# Konfigurasi server lokal (Laragon/Apache) - tidak dipakai GitHub Pages
+.htaccess
+
+# Sistem operasi & editor
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Alat uji (Node/Python)
+node_modules/
+__pycache__/
+*.pyc
+*.log

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Jika Anda memakai perangkat lunak ini dalam karya ilmiah, mohon kutip sebagai berikut."
+type: software
+title: "TOPSIS Decision Engine"
+abstract: "Kalkulator TOPSIS berbasis browser: kriteria benefit/cost, pembobotan manual, Entropy, CRITIC, dan AHP, langkah perhitungan lengkap, analisis sensitivitas dan uji ketahanan, serta laporan PDF dan Excel dengan rumus."
+version: "2.0.0"
+date-released: "2026-10-17"
+license: MIT
+url: "https://edgarcia-id.github.io/topsis-decision-engine-v2/"
+repository-code: "https://github.com/edgarcia-id/topsis-decision-engine-v2"
+authors:
+  - family-names: "Tarigan"
+    given-names: "Alfredo Garcia Elbarta"
+    orcid: "https://orcid.org/0009-0001-4549-5129"
+keywords:
+  - "TOPSIS"
+  - "multi-criteria decision making"
+  - "decision support system"
+  - "entropy weight"
+  - "CRITIC"
+  - "AHP-TOPSIS"
